@@ -1,35 +1,53 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  background-image: url('background.jpg');
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 20px;
-  max-width: 600px;
+  padding: 5vh 8vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1em;
+  text-align: justify;
+  margin-bottom: 2em;
 }
 
 audio {
   width: 100%;
-} 
+  max-width: 400px;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 10vh 6vw;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+}
